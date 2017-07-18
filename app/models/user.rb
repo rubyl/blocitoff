@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   after_create :welcome_send
+  has_many :items
 
   def welcome_send
     WelcomeMailer.welcome_send(self).deliver_now

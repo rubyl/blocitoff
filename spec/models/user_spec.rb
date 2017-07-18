@@ -7,7 +7,6 @@ RSpec.describe User, type: :model do
     let(:user_with_invalid_email) { User.new(email: "", password: 'password') }
 
     it "should be an invalid user due to blank email" do
-      puts user_with_invalid_email
       expect(user_with_invalid_email).to_not be_valid
     end
   end
