@@ -1,3 +1,4 @@
 <div class="list-group-item">
-  <h4 class='list-group-item-heading'><%= item.name %></h4>
+
+  <h4 class='list-group-item-heading'><%= item.name %> <%= link_to "", "/users/#{current_user.id}/items/#{item.id}", method: :delete, class: 'glyphicon glyphicon-remove' %></h4>
 </div>
